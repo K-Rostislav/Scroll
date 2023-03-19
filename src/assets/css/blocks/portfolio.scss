@@ -1,0 +1,32 @@
+.portfolio {
+}
+.portfolio__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: rem(1300);
+    column-gap: rem(140);
+}
+.portfolio__left-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(200);
+}
+.portfolio__right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: rem(200);
+}
+.potrfolio__text-block {
+    max-width: 100%;
+}
+.portfolio__title {
+    margin-bottom: rem(20);
+    color: rgb(174, 174, 174);
+    font-family: 'Outfit';
+    font-size: rem(32);
+}
+.portfolio__text {
+    color: rgb(174, 174, 174);
+    line-height: 150%;
+}
