@@ -3,13 +3,13 @@
 @import "vendor/fonts";
 @import "vendor/options";
 @import "vendor/mixins";
-@import "vendor/locomotive-scroll";
 
 .body {
     background-color: rgb(22, 22, 22);
     color: white;
     font-family: 'Raleway';
     min-width: rem(1670);
+    overflow: hidden;
 }
 
 .page {

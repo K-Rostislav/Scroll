@@ -39,8 +39,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.4",
     "gsap": "^3.11.5",
-    "locomotive-scroll": "^4.1.4",
+    "rallax.js": "^2.0.4",
     "zip": "^1.2.0"
   }
 }
