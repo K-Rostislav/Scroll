@@ -4,32 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1670">
-    <link rel="stylesheet" href="assets/css/iconFonts.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js" defer></script>
     <script src="assets/js/app.min.js" defer></script>
     <title>Гланая</title>
 </head>
 
 <body class="body">
     <div class="page">
-        <main class="main">
-            <section class="intro">
+        <main data-scroll-container class="main">
+            <section data-scroll-section class="intro">
                 <div class="intro__content container">
-                    <h1 class="intro__title">creative scroll</h2>
-                    <div data-speed=".7" class="intro__img">
+                    <h1 data-scroll data-scroll-speed="2.5" class="intro__title">creative scroll</h2>
+                    <div class="intro__img">
                         <picture><source srcset="assets/img/hero.webp" type="image/webp"><img src="assets/img/hero.png" alt=""></picture>
                     </div>
                 </div>
             </section>
-            <div class="portfolio">
+            <div data-scroll-section class="portfolio">
                 <div class="portfolio__content container">
-                    <div data-speed=".95" class="portfolio__left-block">
+                    <div data-scroll data-scroll-speed="-1" data-scroll class="portfolio__left-block">
                         <picture><source srcset="assets/img/work/1.webp" type="image/webp"><img class="portdolio__item" src="assets/img/work/1.jpg" alt=""></picture>
                         <picture><source srcset="assets/img/work/2.webp" type="image/webp"><img class="portdolio__item" src="assets/img/work/2.jpg" alt=""></picture>
                         <div class="potrfolio__text-block portdolio__item">
@@ -38,7 +36,7 @@
                         </div>
                         <picture><source srcset="assets/img/work/6.webp" type="image/webp"><img class="portdolio__item" src="assets/img/work/6.jpg" alt=""></picture>
                     </div>
-                    <div data-speed="1.2" class="portfolio__right-block">
+                    <div data-scroll data-scroll-speed="2" class="portfolio__right-block">
                         <div class="potrfolio__text-block portdolio__item">
                             <h2 class="portfolio__title">Creative floating scroll with amazing parallax effect</h2>
                             <p class="portfolio__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sunt quam aliquid deleniti commodi reprehenderit?</p>

@@ -3,6 +3,7 @@
 @import "vendor/fonts";
 @import "vendor/options";
 @import "vendor/mixins";
+@import "vendor/locomotive-scroll";
 
 .body {
     background-color: rgb(22, 22, 22);
@@ -19,7 +20,7 @@
 }
 
 .main {
-    padding-bottom: rem(200);
+    padding-bottom: rem(150);
 }
 
 *,

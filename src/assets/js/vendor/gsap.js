@@ -1,44 +1,49 @@
 import {gsap, ScrollTrigger} from "gsap/all.js"
+import LocomotiveScroll from "locomotive-scroll"
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger)
 
-ScrollSmoother.create({
-    wrapper: '.page',
-    content: '.main',
-    smooth: 1.5,
-    effects: true,
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    lerp: 0.05,
+    scrollbarClass: '.main',
 })
-gsap.fromTo('.intro', {opacity: 1}, {
-    opacity: 0,
-    scrollTrigger: {
-        trigger: '.intro',
-        start: 'center',
-        end:'1100',
-        scrub: true,
-    }
-})
-let itemsL = gsap.utils.toArray('.portfolio__left-block .portdolio__item')
+
+ScrollTrigger.scrollerProxy('.main', {
+    scrollTop(value) {
+        return arguments.length ? scroll.scrollTo(value, {duration: 0, disableLerp: true}) : scroll.scroll.instance.scroll.y
+    },
+    getBoundingClientRect() {
+      return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight}
+    },
+    pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+});
+scroll.on("scroll", ScrollTrigger.update)
+ScrollTrigger.defaults({ scroller: ".main" })
+ScrollTrigger.addEventListener("refresh", () => scroll.update())
+
+const itemsL = document.querySelectorAll('.portfolio__left-block .portdolio__item')
+
 for (let item of itemsL) {
-    gsap.fromTo(item, {x: -80, opacity: 0}, {
-        opacity: 1, 
+    gsap.fromTo(item, {x: -200, opacity: 0}, {
         x: 0,
+        opacity: 1,
         scrollTrigger: {
             trigger: item,
-            start: '-1000',
-            end: '-50',
             scrub: true,
         }
     })
 }
-let itemsR = gsap.utils.toArray('.portfolio__right-block .portdolio__item')
+
+const itemsR = document.querySelectorAll('.portfolio__right-block .portdolio__item')
+
 for (let item of itemsR) {
-    gsap.fromTo(item, {x: 80, opacity: 0}, {
-        opacity: 1, 
+    gsap.fromTo(item, {x: 200, opacity: 0}, {
         x: 0,
+        opacity: 1,
         scrollTrigger: {
             trigger: item,
-            start: '-1000',
-            end: '-50',
             scrub: true,
         }
     })
