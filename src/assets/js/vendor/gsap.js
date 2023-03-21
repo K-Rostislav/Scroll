@@ -26,7 +26,7 @@ ScrollTrigger.addEventListener("refresh", () => scroll.update())
 const itemsL = document.querySelectorAll('.portfolio__left-block .portdolio__item')
 
 for (let item of itemsL) {
-    gsap.fromTo(item, {x: -200, opacity: 0}, {
+    gsap.fromTo(item, {x: -120, opacity: 0}, {
         x: 0,
         opacity: 1,
         scrollTrigger: {
@@ -39,7 +39,7 @@ for (let item of itemsL) {
 const itemsR = document.querySelectorAll('.portfolio__right-block .portdolio__item')
 
 for (let item of itemsR) {
-    gsap.fromTo(item, {x: 200, opacity: 0}, {
+    gsap.fromTo(item, {x: 120, opacity: 0}, {
         x: 0,
         opacity: 1,
         scrollTrigger: {
